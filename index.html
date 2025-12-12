@@ -1,3 +1,12 @@
+<!--
+README / Instructions (quick):
+1) This single-file website (index.html) is a complete, responsive portfolio template.
+2) To deploy to GitHub Pages: create a repository named `divyanshsharma08.github.io` and push this index.html to the repo's root on the main branch. GitHub Pages will serve it automatically at https://divyanshsharma08.github.io/
+3) Replace placeholder text (NAME, BIO, project links, resume.pdf) with your real content. There are clear "REPLACE" comments in the file.
+4) For contact form: it uses a mailto fallback. If you want an actual form handler, integrate Formspree/Netlify Forms and replace the <form> action as indicated in comments.
+5) Want me to auto-fill your projects and text? Paste the project titles, descriptions, GitHub links, and live links and I'll update.
+-->
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,6 +16,7 @@
   <meta name="description" content="Portfolio of Divyansh Sharma — cybersecurity student, projects, blog, contact." />
   <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
   <style>
+    /* Simple, modern CSS — replace colors/branding as you like */
     :root{
       --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#06b6d4; --glass: rgba(255,255,255,0.04);
       --maxw:1100px; --radius:14px;
@@ -30,33 +40,33 @@
 
     .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
 
-
+    /* Project grid */
     .projects{margin-top:30px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
     .project{padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03)}
     .project h4{margin:0 0 8px 0}
     .tech{font-size:12px;color:var(--muted)}
 
-
+    /* Skills */
     .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
     .skill{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
 
-
+    /* Contact */
     .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
     .textarea{width:100%;min-height:120px;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
     .input{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
 
     footer{margin-top:36px;padding:14px 0;color:var(--muted);text-align:center}
 
-
+    /* Responsive */
     @media (max-width:880px){
       .hero{grid-template-columns:1fr;}
       .contact-grid{grid-template-columns:1fr}
     }
 
-
+    /* simple animated tilt for screenshot */
     .screenshot{height:260px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03)}
 
-
+    /* dark mode toggle small */
     .toggle{display:inline-flex;align-items:center;gap:8px}
   </style>
 </head>
@@ -170,7 +180,7 @@
         <div style="display:flex;gap:16px;margin-top:16px;flex-wrap:wrap">
           <div class="card" style="min-width:220px">
             <div style="font-size:13px;color:var(--muted)">Education</div>
-            <div style="font-weight:700;margin-top:6px">B.Tech / BSc (replace)</div>
+            <div style="font-weight:700;margin-top:6px">B.Tech — JUIT (Passing year 2028)</div>
             <div style="font-size:12px;color:var(--muted);margin-top:6px">University Name — Years</div>
           </div>
 
@@ -194,7 +204,7 @@
             <textarea id="message" class="textarea" placeholder="Message" style="margin-top:8px" required></textarea>
             <div style="display:flex;gap:8px;margin-top:8px;align-items:center">
               <button class="btn" type="submit">Send</button>
-              <div style="font-size:13px;color:var(--muted)">Or email: <a href="mailto:replace@example.com">replace@example.com</a></div>
+              <div style="font-size:13px;color:var(--muted)">Or email: <a href="mailto:rootcyberdivyansh0x@gmail.com">rootcyberdivyansh0x@gmail.com</a></div>
             </div>
 
             <!-- If you want a real serverless form: sign up for Formspree (formspree.io) or Netlify Forms and replace the form action. -->
@@ -224,7 +234,7 @@
     </main>
 
     <footer>
-     Built by Divyansh Sharma
+      Built with ❤️ — Update content in the HTML file. Want a React version or Tailwind setup? Ask and I’ll spit it out.
     </footer>
 
   </div>
@@ -239,7 +249,7 @@
       const subject = encodeURIComponent('Portfolio contact from ' + name);
       const body = encodeURIComponent('From: ' + name + ' (' + email + ')\n\n' + message);
       // mailto fallback
-      window.location.href = `mailto:replace@example.com?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:rootcyberdivyansh0x@gmail.com?subject=${subject}&body=${body}`;
     }
 
     // Optional: simple analytics placeholder (no external calls) to show event counts in console
