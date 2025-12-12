@@ -1,69 +1,251 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Divyansh | Cybersecurity Student</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #050816;
-            color: #e5e7eb;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .card {
-            background: #0b1120;
-            padding: 24px 32px;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            max-width: 480px;
-            text-align: center;
-        }
-        h1 {
-            margin-bottom: 8px;
-            color: #60a5fa;
-        }
-        h2 {
-            margin-top: 0;
-            font-size: 16px;
-            color: #9ca3af;
-        }
-        a {
-            color: #38bdf8;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .tag {
-            display: inline-block;
-            padding: 4px 10px;
-            border-radius: 999px;
-            background: #111827;
-            border: 1px solid #1e293b;
-            font-size: 12px;
-            margin: 4px;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Divyansh Sharma — Cybersecurity Student & Developer</title>
+  <meta name="description" content="Portfolio of Divyansh Sharma — cybersecurity student, projects, blog, contact." />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#06b6d4; --glass: rgba(255,255,255,0.04);
+      --maxw:1100px; --radius:14px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; margin:0; background:linear-gradient(180deg,#061021 0%, var(--bg) 100%); color:#e6eef8; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale}
+    a{color:var(--accent); text-decoration:none}
+    .wrap{max-width:var(--maxw); margin:36px auto; padding:28px}
+
+    header{display:flex;gap:16px;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700}
+    .nav{display:flex;gap:12px;align-items:center}
+    .btn{padding:8px 12px;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.04);cursor:pointer}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;margin-top:28px}
+    .headline{font-size:28px;line-height:1.05;margin:0}
+    .sub{color:var(--muted);margin-top:10px}
+    .actions{display:flex;gap:10px;margin-top:18px}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+
+
+    .projects{margin-top:30px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    .project{padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03)}
+    .project h4{margin:0 0 8px 0}
+    .tech{font-size:12px;color:var(--muted)}
+
+
+    .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+    .skill{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
+
+
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+    .textarea{width:100%;min-height:120px;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    .input{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+
+    footer{margin-top:36px;padding:14px 0;color:var(--muted);text-align:center}
+
+
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;}
+      .contact-grid{grid-template-columns:1fr}
+    }
+
+
+    .screenshot{height:260px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03)}
+
+
+    .toggle{display:inline-flex;align-items:center;gap:8px}
+  </style>
 </head>
 <body>
-    <div class="card">
-        <h1>Divyansh Sharma</h1>
-        <h2>Cybersecurity & CSE Student</h2>
-        <p>Breaking things ethically. Learning to secure the digital world 🔐</p>
-        <p>
-            <span class="tag">Linux</span>
-            <span class="tag">Networking</span>
-            <span class="tag">CTFs</span>
-            <span class="tag">Malware Analysis</span>
-        </p>
-<p>
-    <a href="https://github.com/DivyanshSharma08" target="_blank">GitHub</a> ·
-<a href="https://www.linkedin.com/in/divyansh-sharma-24x7" target="_blank">LinkedIn</a>
-</p>
-    </div>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">DS</div>
+        <div>
+          <div style="font-weight:700">Divyansh Sharma</div>
+          <div style="font-size:13px;color:var(--muted)">Cybersecurity student • Linux • CTFs • Tools</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="btn" href="#projects">Projects</a>
+        <a class="btn" href="#about">About</a>
+        <a class="btn" href="#contact">Contact</a>
+        <a class="btn" href="resume.pdf" download>Resume</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h1 class="headline">I break things (ethically) and build solutions that stay broken — intentionally.</h1>
+          <p class="sub">I'm a cybersecurity student focused on systems, Linux, CTFs and defensive tooling. I work on small tools, capture-the-flag writeups and write simple, reliable scripts that help teams automate repetitive security tasks.</p>
+
+          <div class="actions">
+            <a class="btn" href="#projects">See my work</a>
+            <a class="btn" href="https://github.com/divyanshsharma08" target="_blank">GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/divyansh-sharma-24x7" target="_blank">LinkedIn</a>
+          </div>
+
+          <div style="margin-top:20px" class="card">
+            <div style="font-size:13px;color:var(--muted)">Quick stats</div>
+            <div style="display:flex;gap:18px;margin-top:12px">
+              <div>
+                <div style="font-weight:700">15+</div>
+                <div style="font-size:12px;color:var(--muted)">CTF challenges solved</div>
+              </div>
+              <div>
+                <div style="font-weight:700">10+</div>
+                <div style="font-size:12px;color:var(--muted)">Small projects</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:14px">
+            <div style="font-size:13px;color:var(--muted)">Skills</div>
+            <div class="skills">
+              <div class="skill">Linux</div>
+              <div class="skill">Python</div>
+              <div class="skill">C</div>
+              <div class="skill">Bash</div>
+              <div class="skill">Web: HTML/CSS/JS</div>
+              <div class="skill">Pentesting</div>
+            </div>
+          </div>
+
+        </div>
+
+        <aside>
+          <div class="screenshot card">
+            <!-- Replace this block with a screenshot image of a project. -->
+            <div style="text-align:center;color:var(--muted)">
+              <div style="font-weight:700">Project screenshot</div>
+              <div style="font-size:12px;margin-top:8px">Replace this with an actual image (use GitHub raw link)</div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" style="margin-top:28px">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <h2 style="margin:0">Projects</h2>
+          <div style="font-size:13px;color:var(--muted)">Selected work — click to view</div>
+        </div>
+
+        <div class="projects">
+          <!-- PROJECT: Replace these items with your projects. Keep the structure and add/remove cards as necessary. -->
+          <article class="project">
+            <h4>CTF: Custom Forensics Tool</h4>
+            <div class="tech">Python • Forensics • Linux</div>
+            <p style="margin-top:8px;color:var(--muted);font-size:14px">A compact forensics script to parse custom log formats and extract indicators for rapid triage. <a href="#" target="_blank">View on GitHub</a></p>
+          </article>
+
+          <article class="project">
+            <h4>Small Port Scanner</h4>
+            <div class="tech">C • Networking • Linux</div>
+            <p style="margin-top:8px;color:var(--muted);font-size:14px">Lightweight TCP port scanner with customizable rate limiting and output formats. <a href="#" target="_blank">View on GitHub</a></p>
+          </article>
+
+          <article class="project">
+            <h4>Blog: CTF Writeups</h4>
+            <div class="tech">Markdown • Static</div>
+            <p style="margin-top:8px;color:var(--muted);font-size:14px">Writeups for recent CTF challenges with step-by-step remediation notes. <a href="#" target="_blank">Read</a></p>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" style="margin-top:28px">
+        <h2 style="margin:0">About</h2>
+        <div style="margin-top:12px;color:var(--muted);max-width:780px"> <!-- REPLACE this paragraph with your real about text -->
+          I'm a cybersecurity student who loves dissecting systems, building tiny tools, and writing clear writeups. Currently learning advanced Linux internals, reverse engineering, and automating boring tasks.
+        </div>
+
+        <div style="display:flex;gap:16px;margin-top:16px;flex-wrap:wrap">
+          <div class="card" style="min-width:220px">
+            <div style="font-size:13px;color:var(--muted)">Education</div>
+            <div style="font-weight:700;margin-top:6px">B.Tech / BSc (replace)</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:6px">University Name — Years</div>
+          </div>
+
+          <div class="card" style="min-width:220px"> <!-- Testimonials / Social proof area -->
+            <div style="font-size:13px;color:var(--muted)">Social proof</div>
+            <div style="font-weight:700;margin-top:6px">GitHub • LinkedIn</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:6px">Add links to mentors, endorsements or notable repos here.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" style="margin-top:28px">
+        <h2>Contact</h2>
+        <div style="margin-top:10px;color:var(--muted)">Want to collaborate or need a writeup? Drop a message.</div>
+
+        <div class="contact-grid">
+          <form class="card" style="padding:16px" onsubmit="sendMail(event)">
+            <input id="name" class="input" placeholder="Your name" required />
+            <input id="email" class="input" placeholder="Your email" type="email" style="margin-top:8px" required />
+            <textarea id="message" class="textarea" placeholder="Message" style="margin-top:8px" required></textarea>
+            <div style="display:flex;gap:8px;margin-top:8px;align-items:center">
+              <button class="btn" type="submit">Send</button>
+              <div style="font-size:13px;color:var(--muted)">Or email: <a href="mailto:replace@example.com">replace@example.com</a></div>
+            </div>
+
+            <!-- If you want a real serverless form: sign up for Formspree (formspree.io) or Netlify Forms and replace the form action. -->
+          </form>
+
+          <div class="card">
+            <h4 style="margin:0">Where to find me</h4>
+            <div style="margin-top:10px;color:var(--muted)">
+              <div>GitHub: <a href="https://github.com/divyanshsharma08" target="_blank">github.com/divyanshsharma08</a></div>
+              <div style="margin-top:6px">LinkedIn: <a href="https://www.linkedin.com/in/divyansh-sharma-24x7" target="_blank">divyansh-sharma-24x7</a></div>
+              <div style="margin-top:6px">Twitter/X: <a href="#">(optional)</a></div>
+            </div>
+
+            <div style="margin-top:12px">
+              <div style="font-size:13px;color:var(--muted)">Small extras</div>
+              <ul style="margin:8px 0 0 20px;color:var(--muted)">
+                <li>Download resume (resume.pdf) — add file to repo root</li>
+                <li>Add project screenshots to assets and update src links</li>
+                <li>Enable GitHub Pages if not already</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer>
+      Built with ❤️ — Update content in the HTML file. Want a React version or Tailwind setup? Ask and I’ll spit it out.
+    </footer>
+
+  </div>
+
+  <script>
+    // Small JS: mail fallback using mailto when form submitted
+    function sendMail(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      const subject = encodeURIComponent('Portfolio contact from ' + name);
+      const body = encodeURIComponent('From: ' + name + ' (' + email + ')\n\n' + message);
+      // mailto fallback
+      window.location.href = `mailto:replace@example.com?subject=${subject}&body=${body}`;
+    }
+
+    // Optional: simple analytics placeholder (no external calls) to show event counts in console
+    (function(){
+      console.log('Portfolio template loaded — replace content and deploy to GitHub Pages')
+    })();
+  </script>
 </body>
 </html>
